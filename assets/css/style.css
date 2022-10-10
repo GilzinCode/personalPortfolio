@@ -252,7 +252,7 @@ a i::before{
 a:hover i::before{
   left: 0%;
   transform: translateX(-50%) rotate(45deg);
-  box-shadow: 57px 57px var(--clr);
+  box-shadow: 32px 32px var(--clr);
 }
 
 a i {
@@ -275,7 +275,7 @@ a i::after{
 a:hover i::after{
   left: 100%;
   transform: translateX(-50%) rotate(-135deg);
-  box-shadow: 57px 57px var(--clr);
+  box-shadow: 32px 32px var(--clr);
 }
 
 /* ==== Verde ====*/
