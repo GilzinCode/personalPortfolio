@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200;400;600&display=swap');
+
+/* ==== Geral ==== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Kanit', sans-serif;
+  color: #ffffff;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10%;
+}
+
+body{
+  background: url(../img/starwarswpp.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #ffffff;
+}
+
+/* ==== Main ==== */
+.main{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(3px);
+  border: 3px solid #052386;
+  margin: 3em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.titulo{
+  font-weight: 600;
+  width: 100%;
+  text-transform: uppercase
+}
+.subtitulo{
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase
+}
+
+
+/* ==== Seções ==== */
+#secoes{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ==== Cards ==== */
+.card{
+  position: relative;
+  border: 3px solid #052386;
+  margin: 2em;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+.card:hover{
+  width: 90%;
+  padding: 15px;
+  box-shadow: 0 0 35px #052386;
+}
+.card:hover h1{
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+}
+.card i{
+  display: block;
+  inset: 0;
+}
+.card i::before{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #1338b0;
+  border-bottom: #ffffff;
+  border-left: #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 99%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.card:hover i::before{
+  left: 0.9%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.card i::after{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #1338b0;
+  border-top: #ffffff;
+  border-right: #ffffff;
+  position: absolute;
+  bottom: -6px;
+  right: 96.5%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.card:hover i::after{
+  right: -1.6%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+/* ==== Sobre Mim ==== */
+#sobreMim{
+  position: relative;
+  margin-top: 0;
+  border-bottom: 5px solid #052386;
+  width: 100%;
+  padding-bottom: 7em;
+  border-radius: 0px 0px 30px 30px;
+}
+.foto{
+  margin: 20px;
+  margin-left: 12em;
+  margin-top: 5em;
+  height: 350px;
+  border: 1px solid #052386;
+  padding: 3px;
+}
+.info-box{
+  position: absolute;
+  top: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.7em;
+  right: 100px;
+  margin: 20px;
+  width: 70%;
+  height: 250px;
+}
+.info{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+li span{
+  font-weight: 600;
+}
+li{
+  font-weight: 200
+}
+ul{
+  list-style: none;
+  text-align: start;
+}
+
+/* ==== Carreira ====*/
+#carreira{
+  flex-direction: column;
+}
+.graduacoes, .experiencia-profissional{
+  width: 40%;
+  border-left: 2px solid #1338b0;
+  padding: 10px;
+}
+
+/* ==== Habilidades ==== */
+#habilidades{
+  flex-direction: column;
+  justify-content: space-between;
+}
+.skill-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill-list li{
+  background-color: #1338b01a;
+  margin: 1.3em;
+  padding: 1em;
+  font-size: 1.3em;
+}
+.skill-list li:hover{
+  transition: 0.5s;
+  background-color: #1338b06c;
+  box-shadow: 0 0 10px #1338b0;
+  margin: 1.3em;
+  padding: 1em;
+  font-size: 1.4em;
+  letter-spacing: 00.1em;
+}
+
+/* ==== Encerramento ==== */
+#encerramento{
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7em;
+}
+#encerramento img{
+  width: 70%;
+  margin: 1em;
+}
+
+/* ==== Botões ==== */
+.botoes{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  border-bottom: 3px solid #052386;
+  border-radius: 0 0 30px 30px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn{
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+  color: rgb(228, 236, 243);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 25px;
+  position: relative;
+}
+.btn:hover{
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 25px var(--clr);
+}
+a i::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--clr);
+  position: absolute;
+  top: -6px;
+  left: 100%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+a:hover i::before{
+  left: 0%;
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: 57px 57px var(--clr);
+}
+
+a i {
+  position: absolute;
+  display: block;
+  inset: 0;
+}
+a i::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--clr);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+a:hover i::after{
+  left: 100%;
+  transform: translateX(-50%) rotate(-135deg);
+  box-shadow: 57px 57px var(--clr);
+}
+
+/* ==== Verde ====*/
+.green{
+  position: relative;
+  border: 3px solid #157867;
+  margin: 2em;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+.green:hover{
+  width: 90%;
+  padding: 15px;
+  box-shadow: 0 0 35px #157867;
+}
+.green:hover h1{
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+}
+.green i{
+  display: block;
+  inset: 0;
+}
+.green i::before{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #18a58e;
+  border-bottom: #ffffff;
+  border-left: #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 99%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.green:hover i::before{
+  left: 0.9%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.green i::after{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #18a58e;
+  border-top: #ffffff;
+  border-right: #ffffff;
+  position: absolute;
+  bottom: -6px;
+  right: 96.5%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.green:hover i::after{
+  right: -1.6%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.green .graduacoes, .green .experiencia-profissional{
+  border-left: 2px solid #18a58e;
+}
+.green .skill-list li{
+  background-color: #1578671a;
+}
+.green .skill-list li:hover{
+  background-color: #1578676c;
+  box-shadow: 0 0 10px #157867;
+}
+
+/* ==== Laranja ====*/
+.orange{
+  position: relative;
+  border: 3px solid #D7622D;
+  margin: 2em;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+.orange:hover{
+  width: 90%;
+  padding: 15px;
+  box-shadow: 0 0 35px #D7622D;
+}
+.orange:hover h1{
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+}
+.orange i{
+  display: block;
+  inset: 0;
+}
+.orange i::before{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #fa7b40;
+  border-bottom: #ffffff;
+  border-left: #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 99%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.orange:hover i::before{
+  left: 0.9%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.orange i::after{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #fa7b40;
+  border-top: #ffffff;
+  border-right: #ffffff;
+  position: absolute;
+  bottom: -6px;
+  right: 96.5%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.orange:hover i::after{
+  right: -1.6%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.orange .graduacoes, .orange .experiencia-profissional{
+  border-left: 2px solid #fa7b40;
+}
+.orange .skill-list li{
+  background-color: #D7622D1a;
+}
+.orange .skill-list li:hover{
+  background-color: #D7622D6c;
+  box-shadow: 0 0 10px #D7622D;
+}
+
+/* ==== Vermelho ====*/
+.red{
+  position: relative;
+  border: 3px solid #800D0D;
+  margin: 2em;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+.red:hover{
+  width: 90%;
+  padding: 15px;
+  box-shadow: 0 0 35px #800D0D;
+}
+.red:hover h1{
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+}
+.red i{
+  display: block;
+  inset: 0;
+}
+.red i::before{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #cf2525;
+  border-bottom: #ffffff;
+  border-left: #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 99%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.red:hover i::before{
+  left: 0.9%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.red i::after{
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 11px solid;
+  color: #cf2525;
+  border-top: #ffffff;
+  border-right: #ffffff;
+  position: absolute;
+  bottom: -6px;
+  right: 96.5%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.red:hover i::after{
+  right: -1.6%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.red .graduacoes, .red .experiencia-profissional{
+  border-left: 2px solid #cf2525;
+}
+.red .skill-list li{
+  background-color: #800D0D1a;
+}
+.red .skill-list li:hover{
+  background-color: #800D0D6c;
+  box-shadow: 0 0 10px #800D0D;
+}
